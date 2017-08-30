@@ -1,0 +1,27 @@
+[user]
+  name = Tony Chung
+  email = anthonyuchung@gmail.com
+[branch]
+  autosetuprebase = always
+[alias]
+  br = branch
+  lg = log --pretty=format:'%h %Cgreen%ar %Creset| %s%C(yellow)%d %Cblue[%an]' --graph --date=short
+  hist = log --color --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  la = "!git config -l | grep alias | cut -c 7-"
+  sl = stash list
+  sa = stash apply
+  ss = stash save
+[merge]
+  ff = only
+[commit]
+  template = ~/.gitmessage
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[filter "lfs"]
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
+[rerere]
+  enabled = true
