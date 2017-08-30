@@ -1,0 +1,132 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" Set interactive bash as default vim shell - for vim-instant-markdown plugin
+set shell=bash\ -i
+
+" Set colors
+set term=screen-256color
+
+" Set 10ms for timeout length
+set ttimeoutlen=10
+
+" Split edit your vimrc. Type space, v, r in sequence to trigger
+nmap <leader>vr :sp $MYVIMRC<cr>
+
+" Source (reload) your vimrc. Type space, s, o in sequence to trigger
+nmap <leader>so :source $MYVIMRC<cr>
+
+" Move up and down by visible lines if current line is wrapped
+nmap j gj
+nmap k gk
+
+" Always show statusline
+set laststatus=2
+" Always display the tabline, even if there is only one tab
+set showtabline=2
+" Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set noshowmode
+
+" Colors / highlighting
+syntax enable
+set background=dark
+colorscheme gruvbox
+hi Search cterm=NONE ctermbg=LightGreen
+
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+
+"NERDTree
+" map <C-n> :NERDTreeToggle<CR>
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"Ctrl p
+if exists("g:ctrl_user_command")
+  unlet g:ctrlp_user_command
+endif
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*.bundle,*/node_modules/*
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bundle)$'
+
+"Airline"
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
+
+"Directory and highlight search"
+autocmd BufEnter * if &ft !~ '^nerdtree$' | silent! lcd %:p:h | endif
+set hlsearch
+nmap <leader>h :nohlsearch<cr>
+
+"Trim trailing whitespace"
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+autocmd BufWritePre * :call TrimWhiteSpace()
+
+"Set case insensitive search
+set ignorecase
+set smartcase
+
+"Set cursorlines
+set cursorline cursorcolumn
+
+"Set lazyredraw - faster scroll
+set lazyredraw
+
+"Set paste toggle
+set pastetoggle=<F2>
+
+" Command aliases for typoed commands (accidentally holding shift too long)
+command! Q q " Bind :Q to :q
+command! Qall qall
+command! QA qall
+command! E e
+
+" Toggle line numbers
+nmap <leader>rn :set rnu!<cr>
+nmap <leader>nu :set nu!<cr>
+
+" Copy vim text to OSX clipboard
+map <C-x> :!pbcopy<CR>
+map <C-c> :w !pbcopy<CR><CR>
+
+" Turn on rainbow parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" Syntax linter
+let g:ale_linters = {
+\  'coffeescript' : ['coffee, coffeelint'],
+\  'haml'         : ['haml-lint'],
+\  'html'         : ['HTMLHint'],
+\  'javascript'   : ['eslint'],
+\  'json'         : ['json-lint'],
+\  'markdown'     : ['mdl', 'proselint', 'vale'],
+\  'ruby'         : ['rubocop, ruby'],
+\  'sass'         : ['sass-lint'],
+\  'scss'         : ['sass-lint'],
+\  'sql'          : ['sqlint'],
+\  'yaml'         : ['swaglint'],
+\}
+
+" Quick Explore
+nmap <leader>e :Explore<cr>
+
+" Rename file
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+
+noremap <leader>n :call RenameFile()<cr>
+
+" Run in interactive shell
+nnoremap <leader>ri :RunInInteractiveShell<space>
+
+" Replace new ruby hash syntax with hash rockets
+noremap <leader>ro :%s/\(\w*\): \([':]\)/:\1 => \2/gc

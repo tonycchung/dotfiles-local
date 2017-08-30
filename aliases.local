@@ -1,0 +1,26 @@
+alias al="powder applog"
+alias be="bundle exec"
+alias bi=bundle install --path .bundle
+alias bu="bundle update"
+alias bud="bundle update idme-data"
+alias bus="bundle update idme-services"
+alias ctags="`brew --prefix`/bin/ctags"
+alias c="be rails console"
+alias gdc="git diff --cached"
+alias gfo="git fetch origin"
+alias gu="git fetch origin && git rebase -i origin/master"
+alias pd="popd"
+alias pgstart="brew services start postgresql"
+alias pgstop="brew services stop postgresql"
+alias powr="powder restart"
+alias pr="be pry-remote"
+alias routes="be rake routes"
+alias sk="be sidekiq"
+alias v="vim"
+
+# Rails
+alias migrate="be rake db:migrate db:rollback && be rake db:migrate db:test:prepare"
+alias s="be rspec"
+
+# cd shortcuts
+alias dotfiles="cd ~/dotfiles"
