@@ -1,8 +1,7 @@
-UnPlug 'scrooloose/nerdtree'
-UnPlug 'ctrlpvim/ctrlp.vim'
-UnPlug 'elixir-lang/vim-elixir'
-UnPlug 'fatih/vim-go'
-UnPlug 'slim-template/vim-slim'
+UnPlug 'nerdtree'
+UnPlug 'vim-elixir'
+UnPlug 'vim-go'
+UnPlug 'vim-slim'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'

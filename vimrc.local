@@ -34,10 +34,6 @@ hi Search cterm=NONE ctermbg=LightGreen
 
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
-"NERDTree
-" map <C-n> :NERDTreeToggle<CR>
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 "Ctrl p
 if exists("g:ctrl_user_command")
   unlet g:ctrlp_user_command
@@ -102,7 +98,7 @@ let g:ale_linters = {
 \  'javascript'   : ['eslint'],
 \  'json'         : ['json-lint'],
 \  'markdown'     : ['mdl', 'proselint', 'vale'],
-\  'ruby'         : ['rubocop, ruby'],
+\  'ruby'         : ['rubocop', 'ruby'],
 \  'sass'         : ['sass-lint'],
 \  'scss'         : ['sass-lint'],
 \  'sql'          : ['sqlint'],
