@@ -21,6 +21,10 @@ alias v="vim"
 # Rails
 alias migrate="be rake db:migrate db:rollback && be rake db:migrate db:test:prepare"
 alias s="be rspec"
+alias rc="git diff-tree -r --no-commit-id --name-only master@\{u\} head | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a --force-exclusion
+"
+alias rca="git diff-tree -r --no-commit-id --name-only master@\{u\} head | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a --force-exclusion
+"
 
 # cd shortcuts
 alias dotfiles="cd ~/dotfiles"
