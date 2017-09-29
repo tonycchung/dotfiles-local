@@ -16,6 +16,7 @@ alias powr="powder restart"
 alias pr="be pry-remote"
 alias routes="be rake routes"
 alias sk="be sidekiq"
+alias ucl="gcmsg 'Update changelog'"
 alias v="vim"
 
 # Rails
