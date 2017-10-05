@@ -42,6 +42,8 @@ endif
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*.bundle,*/node_modules/*
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bundle)$'
 
+nnoremap <c-p> :FZF<cr>
+
 "Airline"
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
@@ -93,6 +95,8 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Syntax linter
+let g:ale_lint_delay = 1000 " Default 200
+let g:ale_warn_about_trailing_whitespace = 0
 let g:ale_linters = {
 \  'coffeescript' : ['coffee, coffeelint'],
 \  'haml'         : ['haml-lint'],
