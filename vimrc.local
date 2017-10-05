@@ -100,7 +100,7 @@ let g:ale_linters = {
 \  'javascript'   : ['eslint'],
 \  'json'         : ['json-lint'],
 \  'markdown'     : ['mdl', 'proselint', 'vale'],
-\  'ruby'         : ['rubocop', 'ruby'],
+\  'ruby'         : ['rubocop'],
 \  'sass'         : ['sass-lint'],
 \  'scss'         : ['sass-lint'],
 \  'sql'          : ['sqlint'],
