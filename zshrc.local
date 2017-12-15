@@ -9,11 +9,11 @@ export VISUAL=/usr/local/bin/vim
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir chruby vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir chruby vcs)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
-# ZSH_THEME="agnoster"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -117,11 +117,11 @@ source /usr/local/share/chruby/auto.sh
 chruby ruby-2.3.1
 
 # Go
-export GOPATH=$HOME/gocode
-export PATH=$PATH:$GOPATH/bin
+# export GOPATH=$HOME/gocode
+# export PATH=$PATH:$GOPATH/bin
 
 # Add sbin to path for some brew formulae
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 
 # Powerline-Shell
 function powerline_precmd() {
