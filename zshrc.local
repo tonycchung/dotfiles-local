@@ -123,6 +123,9 @@ chruby ruby-2.3.1
 # Add sbin to path for some brew formulae
 # export PATH="/usr/local/sbin:$PATH"
 
+# Add homebrew openssl to path
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
 # Powerline-Shell
 function powerline_precmd() {
   PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
