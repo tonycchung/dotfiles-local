@@ -132,3 +132,13 @@ nnoremap <leader>ri :RunInInteractiveShell<space>
 
 " Replace new ruby hash syntax with hash rockets
 noremap <leader>ro :%s/\(\w*\): \([':]\)/:\1 => \2/gc
+
+" Tabularize shortcuts
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a> :Tabularize /=><CR>
+  vmap <Leader>a> :Tabularize /=><CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
