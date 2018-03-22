@@ -9,23 +9,10 @@ bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iq v
 bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys 'C-\\') || tmux select-pane -l"
 
 # resize panes using PREFIX H, J, K, L
-# bind H resize-pane -L 5
-# bind J resize-pane -D 5
-# bind K resize-pane -U 5
-# bind L resize-pane -R 5
-
-# Zoom pane for copy
-# unbind +
-# bind + \
-#   new-window -d -n tmux-zoom 'clear && echo TMUX ZOOM && read' \;\
-#   swap-pane -s tmux-zoom.1 \;\
-#   select-window -t tmux-zoom
-#
-# unbind -
-# bind - \
-#   last-window \;\
-#   swap-pane -s tmux-zoom.1 \;\
-#   kill-window -t tmux-zoom
+bind H resize-pane -L 5
+bind J resize-pane -D 5
+bind K resize-pane -U 5
+bind L resize-pane -R 5
 
 # Setup 'v' to begin selection as in Vim
 bind-key -t vi-copy v begin-selection
@@ -148,12 +135,13 @@ set -g message-bg colour166
 set -g @tpm_plugins '            \
   tmux-plugins/tpm               \
   tmux-plugins/tmux-sensible     \
-  tmux-plugins/tmux-copycat      \
-  tmux-plugins/tmux-resurrect    \
   tmux-plugins/tmux-continuum    \
-  tmux-plugins/tmux-yank         \
+  tmux-plugins/tmux-copycat      \
+  tmux-plugins/tmux-open         \
   tmux-plugins/tmux-pain-control \
+  tmux-plugins/tmux-resurrect    \
   tmux-plugins/tmux-sessionist   \
+  tmux-plugins/tmux-yank         \
 '
 
 # tmux continuum
