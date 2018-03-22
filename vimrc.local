@@ -28,8 +28,8 @@ set noshowmode
 
 " Colors / highlighting
 syntax enable
-set background=dark
 colorscheme gruvbox
+set background=dark
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
