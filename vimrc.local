@@ -30,6 +30,9 @@ set noshowmode
 syntax enable
 set background=dark
 colorscheme gruvbox
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ }
 hi Search cterm=NONE ctermbg=LightGreen
 
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
