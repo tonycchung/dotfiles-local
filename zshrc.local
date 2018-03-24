@@ -27,10 +27,5 @@ bindkey '[H' kill-word
 # Delete line with cmd-backspace
 bindkey '[I' kill-whole-line
 
-# Chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby ruby-2.3.1
-
 # Add homebrew openssl to path
 export PATH="/usr/local/opt/openssl/bin:$PATH"
