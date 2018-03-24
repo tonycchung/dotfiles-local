@@ -30,10 +30,6 @@ cask "vlc"
 cask "webpquicklook"
 EOF
 
-fancy_echo "Installing fzf bindings"
-# To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
-
 fancy_echo "Installing zim"
 git clone --recursive https://github.com/zimfw/zimfw.git ${ZDOTDIR:-${HOME}}/.zim
 
@@ -45,6 +41,10 @@ for template_file ( ${ZDOTDIR:-${HOME}}/.zim/templates/* ); do
 done
 
 source ${ZDOTDIR:-${HOME}}/.zlogin
+
+fancy_echo "Installing fzf bindings"
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
 
 fancy_echo "Set git global settings"
 git config --global user.name “Tony Chung“
