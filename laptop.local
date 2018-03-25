@@ -41,6 +41,10 @@ $(brew --prefix)/opt/fzf/install
 fancy_echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+/* fancy_echo "Installing .tmux.conf" */
+/* git clone https://github.com/gpakosz/.tmux.git ~/.tmux */
+/* ln -s -f .tmux/.tmux.conf */
+/* cp .tmux/.tmux.conf.local . */
 
 fancy_echo "Set git global settings"
 git config --global user.name “Tony Chung“
