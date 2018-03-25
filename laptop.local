@@ -1,6 +1,8 @@
 fancy_echo "Installing more homebrew"
 
 brew bundle --file=- <<EOF
+tap caskroom/fonts
+
 brew "neovim"
 brew "tree"
 brew "fzf"
@@ -11,12 +13,14 @@ brew "libtool"
 brew "libxslt"
 brew "readline"
 brew "unixodbc"
+brew "zsh-syntax-highlighting"
 
 cask "appcleaner"
 cask "google-chrome"
 cask "firefox"
 cask "1password"
 cask "launchrocket"
+cask "font-meslo-nerd-font"
 cask "qlcolorcode"
 cask "qlstephen"
 cask "qlmarkdown"
@@ -30,36 +34,28 @@ cask "vlc"
 cask "webpquicklook"
 EOF
 
-fancy_echo "Installing zim"
-git clone --recursive https://github.com/zimfw/zimfw.git ${ZDOTDIR:-${HOME}}/.zim
-
-setopt EXTENDED_GLOB
-for template_file ( ${ZDOTDIR:-${HOME}}/.zim/templates/* ); do
-  user_file="${ZDOTDIR:-${HOME}}/.${template_file:t}"
-  touch ${user_file}
-  ( print -rn "$(<${template_file})$(<${user_file})" >! ${user_file} ) 2>/dev/null
-done
-
-source ${ZDOTDIR:-${HOME}}/.zlogin
-
 fancy_echo "Installing fzf bindings"
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
+
+fancy_echo "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 
 fancy_echo "Set git global settings"
 git config --global user.name “Tony Chung“
 git config --global user.email "anthonyuchung@gmail.com"
 git config --global credential.helper osxkeychain
 
-fancy_echo "Installing rust"
-curl https://sh.rustup.rs -sSf | sh
-
-fancy_echo "Installing alacritty"
-git clone https://github.com/jwilm/alacritty.git ~/alacritty
-cd alacritty
-
-rustup override set stable
-rustup update stable
-
-make app
-cp -r target/release/osx/Alacritty.app /Applications/
+/* fancy_echo "Installing rust" */
+/* curl https://sh.rustup.rs -sSf | sh */
+/*  */
+/* fancy_echo "Installing alacritty" */
+/* git clone https://github.com/jwilm/alacritty.git ~/alacritty */
+/* cd alacritty */
+/*  */
+/* rustup override set stable */
+/* rustup update stable */
+/*  */
+/* make app */
+/* cp -r target/release/osx/Alacritty.app /Applications/ */
