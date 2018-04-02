@@ -16,6 +16,10 @@ alias sk="be sidekiq"
 alias ucl="gcmsg 'Update changelog'"
 alias v="vim"
 
+# Docker
+alias dc="docker-compose"
+alias dcr="docker-compose run"
+
 # Rails
 alias migrate="be rake db:migrate db:rollback && be rake db:migrate db:test:prepare"
 alias s="be rspec"
