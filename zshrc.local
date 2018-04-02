@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/anthonychung/.oh-my-zsh
-DEFAULT_USER=anthonychung
+export ZSH=$HOME/.oh-my-zsh
+DEFAULT_USER=$(whoami)
 
 export EDITOR=/usr/local/bin/vim
 export VISUAL=/usr/local/bin/vim
