@@ -1,7 +1,7 @@
 fancy_echo "Installing more homebrew"
 
 brew bundle --file=- <<EOF
-tap caskroom/fonts
+tap "caskroom/fonts"
 
 brew "neovim"
 brew "tree"
