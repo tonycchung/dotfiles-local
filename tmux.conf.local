@@ -244,7 +244,11 @@ tmux_conf_copy_to_os_clipboard=true
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
+# true color
 set -ga terminal-overrides ",xterm-256color:Tc"
+
+# turn off auto renaming windows
+setw -g automatic-rename off
 
 # smart pane switching with awareness of vim splits
 bind -n C-h run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys C-h) || tmux select-pane -L"

@@ -48,6 +48,8 @@ plugins=(bundler git history history-substring-search postgres zsh-syntax-highli
 unsetopt correct_all
 unsetopt correct
 
+DISABLE_AUTO_TITLE="true"
+
 # Attach or start new tmux session
 if [[ -z "$TMUX" ]] ;then
     ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
