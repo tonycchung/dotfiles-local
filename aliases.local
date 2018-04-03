@@ -19,6 +19,7 @@ alias v="vim"
 # Docker
 alias dc="docker-compose"
 alias dcr="docker-compose run"
+alias dm="docker-machine"
 
 # Rails
 alias migrate="be rake db:migrate db:rollback && be rake db:migrate db:test:prepare"
