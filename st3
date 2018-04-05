@@ -1,0 +1,59 @@
+{
+  "bold_folder_labels": true,
+  "color_scheme": "Packages/Enlightened Color Scheme/enlightened.tmTheme",
+  "ensure_newline_at_eof_on_save": true,
+  "fade_fold_buttons": false,
+  "file_exclude_patterns":
+  [
+    "*.pyc",
+    "*.pyo",
+    "*.exe",
+    "*.dll",
+    "*.obj",
+    "*.o",
+    "*.a",
+    "*.lib",
+    "*.so",
+    "*.dylib",
+    "*.ncb",
+    "*.sdf",
+    "*.suo",
+    "*.pdb",
+    "*.idb",
+    ".DS_Store",
+    "*.class",
+    "*.psd",
+    "*.db",
+    "*.sublime-workspace",
+    ".tags"
+  ],
+  "folder_exclude_patterns":
+  [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS",
+    ".bundle",
+    ".git",
+    "coverage"
+  ],
+  "highlight_line": true,
+  "hot_exit": false,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "line_padding_bottom": 1,
+  "line_padding_top": 1,
+  "remember_full_screen": true,
+  "rulers":
+  [
+    100
+  ],
+  "save_on_focus_lost": true,
+  "shift_tab_unindent": true,
+  "tab_size": 2,
+  "theme": "Flatland Dark.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true
+}
