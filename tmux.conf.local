@@ -289,7 +289,7 @@ set -g @tpm_plugins '            \
   tmux-plugins/tmux-continuum    \
   tmux-plugins/tmux-copycat      \
   tmux-plugins/tmux-open         \
-  tmux-plugins/tmux-pain-control \
+  # tmux-plugins/tmux-pain-control \
   tmux-plugins/tmux-resurrect    \
   tmux-plugins/tmux-sessionist   \
   tmux-plugins/tmux-yank         \
