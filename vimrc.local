@@ -8,7 +8,6 @@ set term=screen-256color
 set textwidth&
 set colorcolumn&
 
-
 " Set 10ms for timeout length
 set ttimeoutlen=10
 
@@ -37,7 +36,9 @@ let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ]
+      \             [ 'gitbranch', 'relativepath', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head'
@@ -48,7 +49,7 @@ hi Search cterm=NONE ctermbg=LightGreen
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
 "" Map ctrl+p to fzf
-nnoremap <c-p> :FZF<cr>
+nnoremap <c-p> :GFiles<cr>
 
 " Directory and highlight search"
 set hlsearch

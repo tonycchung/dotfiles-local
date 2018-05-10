@@ -32,3 +32,5 @@ alias rca="git diff-tree -r --no-commit-id --name-only master@\{u\} head | xargs
 # cd shortcuts
 alias df="cd ~/dotfiles"
 alias dfl="cd ~/dotfiles-local"
+
+[[ -f ~/.aliases-contactually.local ]] && source ~/.aliases-contactually.local
