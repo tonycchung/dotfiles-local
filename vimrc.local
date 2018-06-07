@@ -4,7 +4,8 @@ filetype off                  " required
 set shell=bash\ -i
 
 " Set colors
-set term=screen-256color
+set term=xterm-256color
+set termguicolors
 set textwidth&
 set colorcolumn&
 
@@ -30,8 +31,9 @@ set noshowmode
 
 " Colors / highlighting
 syntax enable
-colorscheme gruvbox
+colorscheme one
 set background=dark
+
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ 'active': {
@@ -50,6 +52,9 @@ autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
 "" Map ctrl+p to fzf
 nnoremap <c-p> :GFiles<cr>
+
+" Disable tmux navigator when zooming the Vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
 
 " Directory and highlight search"
 set hlsearch
@@ -96,7 +101,8 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Syntax linter
-let g:ale_lint_delay = 1000 " Default 200
+let g:ale_lint_delay = 200 " Default 200
+let g:ale_lint_on_enter = 0
 let g:ale_warn_about_trailing_whitespace = 0
 let g:ale_linters = {
 \  'coffeescript' : ['coffee, coffeelint'],
