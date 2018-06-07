@@ -244,8 +244,10 @@ tmux_conf_copy_to_os_clipboard=true
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
-# true color
-set -ga terminal-overrides ",xterm-256color:Tc"
+# Add truecolor support
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+# Default terminal is 256 colors
+set -g default-terminal "screen-256color"
 
 # turn off auto renaming windows
 setw -g automatic-rename off
