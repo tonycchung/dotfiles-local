@@ -42,7 +42,7 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='magenta'
 POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='clear'
 POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='green'
 
-plugins=(bundler git history history-substring-search postgres zsh-syntax-highlighting)
+plugins=(git history history-substring-search postgres zsh-syntax-highlighting)
 
 # Disable autocorrect
 unsetopt correct_all

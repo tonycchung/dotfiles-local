@@ -3,6 +3,7 @@ UnPlug 'vim-elixir'
 UnPlug 'vim-go'
 UnPlug 'vim-slim'
 UnPlug 'ctrlp.vim'
+UnPlug 'Quramy/tsuquyomi'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -15,7 +16,6 @@ Plug 'rakr/vim-one'
 
 "" JS plugins
 Plug 'mxw/vim-jsx'
-Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
