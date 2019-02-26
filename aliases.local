@@ -4,6 +4,7 @@ alias bi=bundle install --path .bundle
 alias bu="bundle update"
 alias ctags="`brew --prefix`/bin/ctags"
 alias c="be rails console"
+alias rs="be rails server"
 alias gfo="git fetch origin"
 alias gu="git fetch origin && git rebase -i origin/master"
 alias pd="popd"
