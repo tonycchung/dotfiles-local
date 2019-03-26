@@ -78,9 +78,6 @@ bindkey '[I' kill-whole-line
 # Add homebrew openssl to path
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-# Run git pre-commit hooks in docker
-ENFORCERY_DOCKER=true
-
 # Load work zshrc settings
 [[ -f ~/.zshrc.work.local ]] && source ~/.zshrc.work.local
 
