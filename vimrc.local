@@ -52,7 +52,7 @@ hi Search cterm=NONE ctermbg=LightGreen
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
 "" Map ctrl+p to fzf
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GFiles<cr>
 
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
@@ -164,6 +164,7 @@ endif
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+let g:go_fmt_command = "gofmt"
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()

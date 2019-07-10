@@ -5,6 +5,9 @@ DEFAULT_USER=$(whoami)
 export EDITOR=/usr/local/bin/vim
 export VISUAL=/usr/local/bin/vim
 
+# Use ripgrep for fzf
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
