@@ -1,9 +1,7 @@
 UnPlug 'nerdtree'
 UnPlug 'vim-elixir'
-UnPlug 'vim-go'
 UnPlug 'vim-slim'
 UnPlug 'ctrlp.vim'
-UnPlug 'Quramy/tsuquyomi'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -13,6 +11,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'rakr/vim-one'
+Plug 'sheerun/vim-polyglot'
 
 "" JS plugins
 Plug 'mxw/vim-jsx'
