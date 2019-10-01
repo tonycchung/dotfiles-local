@@ -264,7 +264,7 @@ bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iq v
 # bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
 # increase history size
-set -g history-limit 10000
+set -g history-limit 50000
 
 # start with mouse mode enabled
 set -g mouse on
@@ -291,7 +291,6 @@ set -g @tpm_plugins '            \
   tmux-plugins/tmux-continuum    \
   tmux-plugins/tmux-copycat      \
   tmux-plugins/tmux-open         \
-  # tmux-plugins/tmux-pain-control \
   tmux-plugins/tmux-resurrect    \
   tmux-plugins/tmux-sessionist   \
   tmux-plugins/tmux-yank         \
