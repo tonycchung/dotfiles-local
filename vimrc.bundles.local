@@ -2,22 +2,26 @@ UnPlug 'nerdtree'
 UnPlug 'vim-elixir'
 UnPlug 'vim-slim'
 UnPlug 'ctrlp.vim'
+UnPlug 'vim-scripts/tComment'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'elzr/vim-json'
 Plug 'morhetz/gruvbox'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'rakr/vim-one'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'https://github.com/adelarsq/vim-matchit'
 
 "" JS plugins
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 
 "" Go plugins
+UnPlug 'fatih/vim-go'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
