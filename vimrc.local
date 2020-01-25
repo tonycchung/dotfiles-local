@@ -102,6 +102,7 @@ let g:ale_warn_about_trailing_whitespace = 0
 let g:ale_linters = {
 \  'html'         : ['HTMLHint'],
 \  'javascript'   : ['eslint'],
+\  'java'         : ['checkstyle'],
 \  'json'         : ['json-lint'],
 \  'markdown'     : ['mdl', 'proselint', 'vale'],
 \  'ruby'         : ['rubocop'],
