@@ -1,7 +1,5 @@
-UnPlug 'nerdtree'
 UnPlug 'vim-elixir'
 UnPlug 'vim-slim'
-UnPlug 'ctrlp.vim'
 UnPlug 'vim-scripts/tComment'
 
 Plug 'airblade/vim-gitgutter'
@@ -10,7 +8,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'elzr/vim-json'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'rakr/vim-one'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
