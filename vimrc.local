@@ -178,4 +178,4 @@ map <C-c> :w !pbcopy<CR><CR>
 " set pastetoggle=<F2>
 
 " bind K to grep word under cursor
-" nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>

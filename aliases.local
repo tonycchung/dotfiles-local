@@ -25,13 +25,12 @@ alias dm="docker-machine"
 # Rails
 alias migrate="be rake db:migrate db:rollback && be rake db:migrate db:test:prepare"
 alias s="be spring rspec"
-alias rc="git diff-tree -r --no-commit-id --name-only master@\{u\} head | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a --force-exclusion
-"
-alias rca="git diff-tree -r --no-commit-id --name-only master@\{u\} head | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a --force-exclusion
-"
 
 # cd shortcuts
 alias df="cd ~/dotfiles"
 alias dfl="cd ~/dotfiles-local"
+
+alias uc="cd ~/development/urbancompass"
+alias ucc="cd ~/development/urbancompass/src/go/compass.com/contacts"
 
 [[ -f ~/.aliases-work.local ]] && source ~/.aliases-work.local
