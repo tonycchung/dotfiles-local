@@ -1,0 +1,4 @@
+set surround
+set commentary
+
+source ~/.vimrc
