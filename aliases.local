@@ -33,4 +33,4 @@ alias dfl="cd ~/dotfiles-local"
 alias uc="cd ~/development/urbancompass"
 alias ucc="cd ~/development/urbancompass/src/go/compass.com/contacts"
 
-[[ -f ~/.aliases-work.local ]] && source ~/.aliases-work.local
+[[ -f ~/.aliases.work.local ]] && source ~/.aliases.work.local
