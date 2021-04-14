@@ -22,5 +22,4 @@ UnPlug 'fatih/vim-go'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
-Plug 'https://github.com/godlygeek/tabular.git'
-Plug 'https://github.com/nathanaelkane/vim-indent-guides.git'
+Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
