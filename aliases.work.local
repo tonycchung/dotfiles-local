@@ -2,7 +2,12 @@ alias rea="cd ~/workspace/reactually"
 alias enf="cd ~/workspace/enforcery"
 alias y="yarn"
 alias ys="y start"
-alias tasks="~/development/urbancompass/src/go/compass.com/tasks/"
+
+alias uc="cd ~/development/urbancompass"
+alias ucc="cd ~/development/urbancompass/src/go/compass.com/contacts"
+alias ucql="cd ~/development/urbancompass/src/go/compass.com/qualified_leads"
+
+alias grpcreq="~/development/urbancompass/scripts/grpcreq"
 
 # deploy stuff
 alias prod-l="heroku run rails c --app contactually-east-production --size=performance-l"
